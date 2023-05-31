@@ -698,7 +698,7 @@ h6 {
   letter-spacing: 0.55px;
 }
 .skills__container .skills__block-element-title {
-  font-family: 700 22px "Titillium Web", sans-serif;
+  font: 700 22px "Titillium Web", sans-serif;
   line-height: 18px;
   text-transform: uppercase;
   letter-spacing: 0.48px;
