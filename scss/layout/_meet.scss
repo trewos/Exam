@@ -1,0 +1,313 @@
+.meet {
+  padding: 119px 0 127px;
+  width: 100%;
+  background-color: #e7f1f8;
+  color: #3c4761;;
+
+  &__container {
+    max-width: 1170px;
+    text-align: center;
+
+    .meet__title {
+      margin: 0 0 4% 7px;
+      position: relative;
+      font: 700 $fs-title $font-family-base;
+      letter-spacing: 4px;
+      line-height: 30px;
+      text-transform: uppercase;
+
+      &::before {
+        @include line;
+        background-color: $black;
+        opacity: 0.10;
+        top: 51px;
+        left: 46%;
+      }
+    }
+
+    .meet__description {
+      margin: 0 0 6.7% 4px;
+      font: 400 $fs-small-medium $font-family-base;
+      letter-spacing: 0.36px;
+      line-height: 26px;
+    }
+
+    .meet__block {
+      padding: 0 24px;
+
+      .meet__block-element {
+        .meet__block-element-mugshot {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: #878787;
+          margin: 0 auto 40px auto;
+        }
+
+        .meet__block-element-title {
+          color: #27283d;
+          font-family: "Titillium Web", sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          font-style: normal;
+          line-height: 18px;
+          text-transform: uppercase;
+          letter-spacing: 0.48px;
+          margin-bottom: 13px;
+        }
+
+        .meet__block-element-position {
+          color: #30bae7;
+          font-family: "Titillium Web", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+          line-height: 18px;
+          letter-spacing: 0.32px;
+          margin-bottom: 22px;
+        }
+
+        .meet__block-element-description {
+          color: #3c4761;
+          font-family: "Titillium Web", sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          font-style: normal;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: 0.32px;
+          padding: 0 22px;
+          margin-bottom: 27px;
+        }
+
+        .meet__block-element-social {
+          margin-left: 2px;
+
+          a {
+            padding: 0 4px;
+          }
+        }
+      }
+
+      .meet__block-element:first-child {
+        margin-left: 2px;
+
+        .meet__block-element-title {
+          margin-bottom: 12px;
+        }
+
+        .meet__block-element-description {
+
+        }
+      }
+
+      .meet__block-element:last-child {
+        margin-left: -2px;
+        padding: 0 12px;
+
+        .meet__block-element-title {
+          margin-left: 12px;
+        }
+
+        .meet__block-element-position {
+          margin-left: 12px;
+        }
+
+        .meet__block-element-description {
+          margin-left: 12px;
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .meet {
+    padding: 108px 0 100px;
+
+    &__container {
+      max-width: 992px;
+
+      .meet__block {
+        .meet__block-element {
+          padding: 0;
+          .meet__block-element-mugshot {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 38px auto;
+          }
+
+          .meet__block-element-title {
+            font-size: 24px;
+            line-height: 18px;
+            letter-spacing: 0.48px;
+            margin-bottom: 13px;
+          }
+
+          .meet__block-element-position {
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.32px;
+            margin-bottom: 22px;
+          }
+
+          .meet__block-element-description {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+            padding: 0 4px;
+            margin-bottom: 27px;
+          }
+
+          .meet__block-element-social {
+            margin-left: 2px;
+
+            a {
+              padding: 0 4px;
+            }
+          }
+        }
+
+        .meet__block-element:first-child {
+          margin-left: 2px;
+
+          .meet__block-element-title {
+            margin-bottom: 12px;
+          }
+        }
+
+        .meet__block-element:last-child {
+          margin-left: -2px;
+          padding: 0;
+
+          .meet__block-element-title {
+            margin-left: 12px;
+          }
+
+          .meet__block-element-position {
+            margin-left: 12px;
+          }
+
+          .meet__block-element-description {
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .meet {
+    padding: 98px 0 90px;
+
+    &__container {
+      max-width: 767px;
+
+      .meet__title {
+        margin-left: 0;
+        font-size: $fs-large-medium;
+        letter-spacing: 2px;
+
+        &::before {
+          @include line;
+          top: 42px;
+          left: 46%;
+        }
+      }
+
+      .meet__description {
+        margin-left: 0;
+        font-size: $fs-base;
+        line-height: 22px;
+      }
+
+      .meet__block {
+        padding: 0 10px;
+        .meet__block-element {
+          padding: 0;
+          .meet__block-element-mugshot {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 36px auto;
+          }
+
+          .meet__block-element-title {
+            font-size: 20px;
+            line-height: 16px;
+            margin-bottom: 12px;
+          }
+
+          .meet__block-element-position {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 18px;
+          }
+
+          .meet__block-element-description {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 0 32px;
+            margin-bottom: 22px;
+          }
+
+          .meet__block-element-social {
+            margin-left: 2px;
+            margin-bottom: 10%;
+
+          }
+        }
+
+        .meet__block-element:first-child {
+          margin-left: 0;
+
+          .meet__block-element-title {
+            margin-bottom: 12px;
+          }
+        }
+
+        .meet__block-element:last-child {
+          margin-left: 0;
+          padding: 0;
+
+          .meet__block-element-title {
+            margin-left: 0;
+          }
+
+          .meet__block-element-position {
+            margin-left: 0;
+          }
+
+          .meet__block-element-description {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .meet {
+    padding: 78px 0 70px;
+
+    &__container {
+      max-width: 320px;
+
+      .meet__title {
+        font-size: $fs-extra-medium-large;
+        margin-bottom: 20px;
+
+        &::before {
+          @include line;
+          top: 68px;
+          left: 35%;
+        }
+      }
+    }
+  }
+}
