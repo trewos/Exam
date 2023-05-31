@@ -1,8 +1,8 @@
 .meet {
   padding: 119px 0 127px;
   width: 100%;
-  background-color: #e7f1f8;
-  color: #3c4761;;
+  background-color: $bg-meet;
+  color: $blue-dark;
 
   &__container {
     max-width: 1170px;
@@ -35,52 +35,41 @@
     .meet__block {
       padding: 0 24px;
 
-      .meet__block-element {
-        .meet__block-element-mugshot {
-          width: 200px;
-          height: 200px;
+      &-element {
+        &-mugshot {
+          @include size(200px, 200px);
           border-radius: 50%;
-          background-color: #878787;
+          background-color: $brown;
           margin: 0 auto 40px auto;
         }
 
-        .meet__block-element-title {
-          color: #27283d;
-          font-family: "Titillium Web", sans-serif;
-          font-size: 24px;
-          font-weight: 700;
-          font-style: normal;
+        &-title {
+          color: $black-light;
+          font: 700 $fs-medium $font-family-base;
           line-height: 18px;
           text-transform: uppercase;
           letter-spacing: 0.48px;
           margin-bottom: 13px;
         }
 
-        .meet__block-element-position {
-          color: #30bae7;
-          font-family: "Titillium Web", sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          font-style: normal;
+        &-position {
+          color: $blue-light;
+          font: 400 $fs-base $font-family-base;
           line-height: 18px;
           letter-spacing: 0.32px;
           margin-bottom: 22px;
         }
 
-        .meet__block-element-description {
-          color: #3c4761;
-          font-family: "Titillium Web", sans-serif;
-          font-size: 16px;
-          font-weight: 300;
-          font-style: normal;
+        &-description {
+          color: $blue-dark;
+          font: 300 $fs-base $font-family-base;
           line-height: 24px;
-          text-align: center;
           letter-spacing: 0.32px;
           padding: 0 22px;
           margin-bottom: 27px;
         }
 
-        .meet__block-element-social {
+        &-social {
           margin-left: 2px;
 
           a {
@@ -89,7 +78,7 @@
         }
       }
 
-      .meet__block-element:first-child {
+      &-element:first-child {
         margin-left: 2px;
 
         .meet__block-element-title {
@@ -101,7 +90,7 @@
         }
       }
 
-      .meet__block-element:last-child {
+      &-element:last-child {
         margin-left: -2px;
         padding: 0 12px;
 
@@ -127,41 +116,32 @@
     padding: 108px 0 100px;
 
     &__container {
-      max-width: 992px;
+      max-width: 991px;
 
       .meet__block {
-        .meet__block-element {
+        &-element {
           padding: 0;
-          .meet__block-element-mugshot {
-            width: 180px;
-            height: 180px;
+
+          &-mugshot {
+            @include size(180px, 180px);
             border-radius: 50%;
             margin: 0 auto 38px auto;
           }
 
-          .meet__block-element-title {
-            font-size: 24px;
-            line-height: 18px;
-            letter-spacing: 0.48px;
+          &-title {
             margin-bottom: 13px;
           }
 
-          .meet__block-element-position {
-            font-size: 16px;
-            line-height: 18px;
-            letter-spacing: 0.32px;
+          &-position {
             margin-bottom: 22px;
           }
 
-          .meet__block-element-description {
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 0.32px;
+          &-description {
             padding: 0 4px;
             margin-bottom: 27px;
           }
 
-          .meet__block-element-social {
+          &-social {
             margin-left: 2px;
 
             a {
@@ -170,7 +150,7 @@
           }
         }
 
-        .meet__block-element:first-child {
+        &-element:first-child {
           margin-left: 2px;
 
           .meet__block-element-title {
@@ -178,7 +158,7 @@
           }
         }
 
-        .meet__block-element:last-child {
+        &-element:last-child {
           margin-left: -2px;
           padding: 0;
 
@@ -199,7 +179,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .meet {
     padding: 98px 0 90px;
 
@@ -226,42 +206,43 @@
 
       .meet__block {
         padding: 0 10px;
-        .meet__block-element {
+
+        &-element {
           padding: 0;
-          .meet__block-element-mugshot {
-            width: 160px;
-            height: 160px;
+
+          &-mugshot {
+            @include size(160px, 160px);
             border-radius: 50%;
             margin: 0 auto 36px auto;
           }
 
-          .meet__block-element-title {
-            font-size: 20px;
+          &-title {
+            font-size: $fs-medium-smaller;
             line-height: 16px;
             margin-bottom: 12px;
           }
 
-          .meet__block-element-position {
-            font-size: 14px;
+          &-position {
+            font-size: $fs-smaller;
             line-height: 18px;
             margin-bottom: 18px;
           }
 
-          .meet__block-element-description {
-            font-size: 14px;
+          &-description {
+            font-size: $fs-smaller;
             line-height: 22px;
             padding: 0 32px;
             margin-bottom: 22px;
           }
 
-          .meet__block-element-social {
+          &-social {
             margin-left: 2px;
             margin-bottom: 10%;
 
           }
         }
 
-        .meet__block-element:first-child {
+        &-element:first-child {
           margin-left: 0;
 
           .meet__block-element-title {

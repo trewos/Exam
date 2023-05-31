@@ -4,13 +4,20 @@ $white: #fff;
 $white-light: #f7f3ea;
 $black: #000;
 $orange: #eb7d4b;
+$brown: #878787;
+$black-gray: #393939;
+$black-light: #27283d;
+$blue-light: #30bae7;
+$blue-dark: #3c4761;
 
 
 /* Background-color */
 
 $bg-welcome: #87509c;
 $bg-service: #17c2a4;
-
+$bg-skills: #ffffff;
+$bg-meet: #e7f1f8;
+$bg-portfolio: #ffdd99;
 
 /* Border-color */
 
@@ -33,10 +40,12 @@ $fs-large-smaller: 30px;
 $fs-large-small: 34px;
 $fs-large-medium: 36px;
 $fs-large: 42px;
+$fs-extra-large: 50px;
 
 /* Base font-size */
 
 $fs-base: 16px;
+$fs-span: 32px;
 $fs-title: 40px;
 
 /* Font Family */
@@ -45,9 +54,9 @@ $font-family-base: "Titillium Web", sans-serif;
 
 /* RGBA */
 
-$border-shadow: rgba(0, 0, 0, 0.15);
-$border-shadow-small: rgba(0, 0, 0, 0.10);
-$border-shadow-smaller: rgba(0, 0, 0, 0.8);
+$border-shadow: rgba(0, 0, 0, 0.16);
+$border-shadow-small: rgba(0, 0, 0, 0.14);
+$border-shadow-smaller: rgba(0, 0, 0, 0.12);
 
 /* Hover */
 

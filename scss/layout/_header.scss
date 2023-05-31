@@ -37,12 +37,12 @@
     .welcome {
         padding: 100px 0;
         &__container {
-            max-width: 992px;
+            max-width: 991px;
         }
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .welcome {
         padding: 90px 0;
         &__container {
