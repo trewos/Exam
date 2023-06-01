@@ -25,9 +25,9 @@ function smoothScroll(event, target) {
     const offsetTop = element.offsetTop;
     const offsetHeight = element.offsetHeight;
     const windowHeight = window.innerHeight;
-    const distance = offsetTop - ((windowHeight - offsetHeight) / 2);
+    const distance = offsetTop - ((windowHeight - offsetHeight) / 2) - 10;
     window.scroll({
-        top: offsetTop,
+        top: distance,
         left: 0,
         behavior: 'smooth'
     });
