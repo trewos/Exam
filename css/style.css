@@ -132,6 +132,7 @@ h6 {
   line-height: 18px;
   padding: 7px 17px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .header__container .header-burger-menu-list-item .header-burger-menu-list-link:hover {
   background-color: #643a79;
