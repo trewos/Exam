@@ -1,13 +1,12 @@
+/* Meet */
 .meet {
   padding: 119px 0 127px;
   width: 100%;
   background-color: $bg-meet;
   color: $blue-dark;
-
   &__container {
     max-width: 1170px;
     text-align: center;
-
     .meet__title {
       margin: 0 0 4% 7px;
       position: relative;
@@ -15,7 +14,6 @@
       letter-spacing: 4px;
       line-height: 30px;
       text-transform: uppercase;
-
       &::before {
         @include line;
         background-color: $black;
@@ -24,17 +22,14 @@
         left: 46%;
       }
     }
-
     .meet__description {
       margin: 0 0 6.7% 4px;
       font: 400 $fs-small-medium $font-family-base;
       letter-spacing: 0.36px;
       line-height: 26px;
     }
-
     .meet__block {
       padding: 0 24px;
-
       &-element {
         &-mugshot {
           @include size(200px, 200px);
@@ -42,7 +37,6 @@
           background-color: $brown;
           margin: 0 auto 40px auto;
         }
-
         &-title {
           color: $black-light;
           font: 700 $fs-medium $font-family-base;
@@ -51,7 +45,6 @@
           letter-spacing: 0.48px;
           margin-bottom: 13px;
         }
-
         &-position {
           color: $blue-light;
           font: 400 $fs-base $font-family-base;
@@ -59,7 +52,6 @@
           letter-spacing: 0.32px;
           margin-bottom: 22px;
         }
-
         &-description {
           color: $blue-dark;
           font: 300 $fs-base $font-family-base;
@@ -68,108 +60,81 @@
           padding: 0 22px;
           margin-bottom: 27px;
         }
-
         &-social {
           margin-left: 2px;
-
           a {
             padding: 0 4px;
           }
         }
       }
-
       &-element:first-child {
         margin-left: 2px;
-
         .meet__block-element-title {
           margin-bottom: 12px;
         }
-
-        .meet__block-element-description {
-
-        }
       }
-
       &-element:last-child {
         margin-left: -2px;
         padding: 0 12px;
-
         .meet__block-element-title {
           margin-left: 12px;
         }
-
         .meet__block-element-position {
           margin-left: 12px;
         }
-
         .meet__block-element-description {
           margin-left: 12px;
         }
-
       }
     }
   }
 }
-
+/* Adaptive for meet */
 @media (max-width: 1170px) {
   .meet {
     padding: 108px 0 100px;
-
     &__container {
       max-width: 991px;
-
       .meet__block {
         &-element {
           padding: 0;
-
           &-mugshot {
             @include size(180px, 180px);
             border-radius: 50%;
             margin: 0 auto 38px auto;
           }
-
           &-title {
             margin-bottom: 13px;
           }
-
           &-position {
             margin-bottom: 22px;
           }
-
           &-description {
             padding: 0 4px;
             margin-bottom: 27px;
           }
-
           &-social {
             margin-left: 2px;
-
             a {
               padding: 0 4px;
             }
           }
         }
-
         &-element:first-child {
           margin-left: 2px;
-
           .meet__block-element-title {
             margin-bottom: 12px;
           }
         }
-
         &-element:last-child {
           margin-left: -2px;
           padding: 0;
-
           .meet__block-element-title {
             margin-left: 12px;
           }
-
           .meet__block-element-position {
             margin-left: 12px;
           }
-
           .meet__block-element-description {
             margin-left: 12px;
           }
@@ -178,90 +143,71 @@
     }
   }
 }
-
 @media (max-width: 991px) {
   .meet {
     padding: 98px 0 90px;
-
     &__container {
       max-width: 767px;
-
       .meet__title {
         margin-left: 0;
         font-size: $fs-large-medium;
         letter-spacing: 2px;
-
         &::before {
           @include line;
           top: 42px;
           left: 46%;
         }
       }
-
       .meet__description {
         margin-left: 0;
         font-size: $fs-base;
         line-height: 22px;
       }
-
       .meet__block {
         padding: 0 10px;
-
         &-element {
           padding: 0;
-
           &-mugshot {
             @include size(160px, 160px);
             border-radius: 50%;
             margin: 0 auto 36px auto;
           }
-
           &-title {
             font-size: $fs-medium-smaller;
             line-height: 16px;
             margin-bottom: 12px;
           }
-
           &-position {
             font-size: $fs-smaller;
             line-height: 18px;
             margin-bottom: 18px;
           }
-
           &-description {
             font-size: $fs-smaller;
             line-height: 22px;
             padding: 0 32px;
             margin-bottom: 22px;
           }
-
           &-social {
             margin-left: 2px;
             margin-bottom: 10%;
-
           }
         }
-
         &-element:first-child {
           margin-left: 0;
-
           .meet__block-element-title {
             margin-bottom: 12px;
           }
         }
-
         .meet__block-element:last-child {
           margin-left: 0;
           padding: 0;
-
           .meet__block-element-title {
             margin-left: 0;
           }
-
           .meet__block-element-position {
             margin-left: 0;
           }
-
           .meet__block-element-description {
             margin-left: 0;
           }
@@ -270,19 +216,14 @@
     }
   }
 }
-
-
 @media (max-width: 767px) {
   .meet {
     padding: 78px 0 70px;
-
     &__container {
       max-width: 320px;
-
       .meet__title {
         font-size: $fs-extra-medium-large;
         margin-bottom: 20px;
-
         &::before {
           @include line;
           top: 68px;

@@ -1,199 +1,286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="eu" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <title>Exam</title>
 </head>
 <body>
 <!-- Website -->
 <div class="wrapper container-fluid">
-    <!--Welcome-->
-    <div class="welcome">
-        <div class="welcome__container container-fluid">
-            <h1 class="welcome__title">Hi there! We are the new kids on the block<br>
-                and we build awesome websites and mobile apps.</h1>
-            <button class="welcome__button">Work with us!</button>
+    <!--Header-->
+    <header class="header">
+        <!-- Burger-menu -->
+        <nav class="header__navbar navbar fixed-top navbar-expand-lg">
+            <div class="header__container container-fluid">
+                <a href="#Welcome" onclick="smoothScroll(event, 'Welcome')" class="header-logo navbar-brand"><img src="img/logo.png" class="img-fluid" alt="logo" /></a>
+
+                <button class="header-burger-button navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                    <span class="header-burger-button-toggle navbar-toggler-icon"></span>
+                </button>
+                <div class="header-burger-menu collapse navbar-collapse" id="navbarContent">
+                    <ul class="header-burger-menu-list navbar-nav ml-auto">
+                        <li class="header-burger-menu-list-item nav-item"><a href="#Welcome" onclick="smoothScroll(event, 'Welcome')" class="header-burger-menu-list-link">Home</a></li>
+                        <li class="header-burger-menu-list-item nav-item"><a href="#Services" onclick="smoothScroll(event, 'Services')" class="header-burger-menu-list-link">About</a></li>
+                        <li class="header-burger-menu-list-item nav-item"><a href="#Portfolio" onclick="smoothScroll(event, 'Portfolio')" class="header-burger-menu-list-link">Work</a></li>
+                        <li class="header-burger-menu-list-item nav-item"><a href="#Response" onclick="smoothScroll(event, 'Response')" class="header-burger-menu-list-link">Blog</a></li>
+                        <li class="header-burger-menu-list-item nav-item"><a href="#Touch" onclick="smoothScroll(event, 'Touch')" class="header-burger-menu-list-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Content-->
+    <div class="content">
+        <!--Welcome-->
+        <div id="Welcome" class="welcome">
+            <div class="welcome__container container-fluid">
+                <h1 class="welcome__title">
+                    Hi there! We are the new kids on the block<br />
+                    and we build awesome websites and mobile apps.
+                </h1>
+                <button class="welcome__button">Work with us!</button>
+            </div>
         </div>
-    </div>
-    <!--Services-->
-    <div class="services">
-        <div class="services__container container-fluid">
-            <h1 class="services__title">Services we provide</h1>
-            <p class="services__description">We are working with both individuals and businesses from all over the globe<br>
-                to create awesome websites and applications.
-            </p>
-            <div class="services__block row">
-                <div class="services__block-element-flag col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/services/Flag_icon.png" class="img-fluid"
-                         alt="flag">
-                    <div class="services__block-element-flag-description">
-                        <h3>Branding</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+        <!--Services-->
+        <div id="Services" class="services">
+            <div class="services__container container-fluid">
+                <h1 class="services__title">Services we provide</h1>
+                <p class="services__description">
+                    We are working with both individuals and businesses from all over the globe<br />
+                    to create awesome websites and applications.
+                </p>
+                <div class="services__block row">
+                    <div class="services__block-element-flag col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/services/Flag_icon.png" class="img-fluid" alt="flag" />
+                        <div class="services__block-element-flag-description">
+                            <h3>Branding</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="services__block-element-crayon col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/services/Crayon_icon.png" class="img-fluid"
-                         alt="crayon">
-                    <div class="services__block-element-crayon-description">
-                        <h3>Design</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <div class="services__block-element-crayon col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/services/Crayon_icon.png" class="img-fluid" alt="crayon" />
+                        <div class="services__block-element-crayon-description">
+                            <h3>Design</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="services__block-element-gears col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/services/Gears_icon.png" class="img-fluid"
-                         alt="gears">
-                    <div class="services__block-element-gears-description">
-                        <h3>Development</h3>
-                        <p>At vero eos et accusamus et iusto odio dignissimos qui blanditiis praesentium.</p>
+                    <div class="services__block-element-gears col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/services/Gears_icon.png" class="img-fluid" alt="gears" />
+                        <div class="services__block-element-gears-description">
+                            <h3>Development</h3>
+                            <p>At vero eos et accusamus et iusto odio dignissimos qui blanditiis praesentium.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="services__block-element-rocket col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/services/Rocket_icon.png" class="img-fluid"
-                         alt="rocketg">
-                    <div class="services__block-element-rocket-description">
-                        <h3>ROCKET SCIENCE</h3>
-                        <p>Et harum quidem rerum est et expedita distinctio. Nam libero tempore.</p>
+                    <div class="services__block-element-rocket col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/services/Rocket_icon.png" class="img-fluid" alt="rocketg" />
+                        <div class="services__block-element-rocket-description">
+                            <h3>ROCKET SCIENCE</h3>
+                            <p>Et harum quidem rerum est et expedita distinctio. Nam libero tempore.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Meet-->
-    <div class="meet">
-        <div class="meet__container container-fluid">
-            <h1 class="meet__title">Meet our beautiful team</h1>
-            <p class="meet__description">We are a small team of designers and developers, who help brands with big ideas.</p>
-            <div class="meet__block row">
-                <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
-                    <div class="meet__block-element-mugshot"></div>
-                    <h1 class="meet__block-element-title">Anne Hathaway</h1>
-                    <p class="meet__block-element-position">CEO / Marketing Guru</p>
-                    <p class="meet__block-element-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
-                    <div class="meet__block-element-social">
-                        <a href="#"><img src="img/meet/Fb_icon.png" alt="facebook"></a>
-                        <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter"></a>
-                        <a href="#"><img src="img/meet/LinkedIn_icon.png" alt="LinkedIn"></a>
-                        <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail"></a>
+        <!--Meet-->
+        <div id="Meet" class="meet">
+            <div class="meet__container container-fluid">
+                <h1 class="meet__title">Meet our beautiful team</h1>
+                <p class="meet__description">We are a small team of designers and developers, who help brands with big ideas.</p>
+                <div class="meet__block row">
+                    <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
+                        <div class="meet__block-element-mugshot"></div>
+                        <h1 class="meet__block-element-title">Anne Hathaway</h1>
+                        <p class="meet__block-element-position">CEO / Marketing Guru</p>
+                        <p class="meet__block-element-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+                        <div class="meet__block-element-social">
+                            <a href="#"><img src="img/meet/Fb_icon.png" alt="facebook" /></a>
+                            <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter" /></a>
+                            <a href="#"><img src="img/meet/LinkedIn_icon.png" alt="LinkedIn" /></a>
+                            <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail" /></a>
+                        </div>
                     </div>
-                </div>
-                <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
-                    <div class="meet__block-element-mugshot"></div>
-                    <h1 class="meet__block-element-title">Kate Upton</h1>
-                    <p class="meet__block-element-position">Creative Director</p>
-                    <p class="meet__block-element-description">Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.</p>
-                    <div class="meet__block-element-social">
-                        <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter"></a>
-                        <a href="#"><img src="img/meet/LinkedIn_icon.png" alt="LinkedIn"></a>
-                        <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail"></a>
+                    <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
+                        <div class="meet__block-element-mugshot"></div>
+                        <h1 class="meet__block-element-title">Kate Upton</h1>
+                        <p class="meet__block-element-position">Creative Director</p>
+                        <p class="meet__block-element-description">Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.</p>
+                        <div class="meet__block-element-social">
+                            <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter" /></a>
+                            <a href="#"><img src="img/meet/LinkedIn_icon.png" alt="LinkedIn" /></a>
+                            <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail" /></a>
+                        </div>
                     </div>
-                </div>
-                <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
-                    <div class="meet__block-element-mugshot"></div>
-                    <h1 class="meet__block-element-title">Olivia Wilde</h1>
-                    <p class="meet__block-element-position">Lead Designer</p>
-                    <p class="meet__block-element-description">Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem nesciunt.</p>
-                    <div class="meet__block-element-social">
-                        <a href="#"><img src="img/meet/Fb_icon.png" alt="facebook"></a>
-                        <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter"></a>
-                        <a href="#"><img src="img/meet/LinkedIn_icon.png" alt="LinkedIn"></a>
-                        <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail"></a>
+                    <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
+                        <div class="meet__block-element-mugshot"></div>
+                        <h1 class="meet__block-element-title">Olivia Wilde</h1>
+                        <p class="meet__block-element-position">Lead Designer</p>
+                        <p class="meet__block-element-description">Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem nesciunt.</p>
+                        <div class="meet__block-element-social">
+                            <a href="#"><img src="img/meet/Fb_icon.png" alt="facebook" /></a>
+                            <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter" /></a>
+                            <a href="#"><img src="img/meet/LinkedIn_icon.png" alt="LinkedIn" /></a>
+                            <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail" /></a>
+                        </div>
                     </div>
-                </div>
-                <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
-                    <div class="meet__block-element-mugshot"></div>
-                    <h1 class="meet__block-element-title">Ashley Greene</h1>
-                    <p class="meet__block-element-position">SEO / Developer</p>
-                    <p class="meet__block-element-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                    <div class="meet__block-element-social">
-                        <a href="#"><img src="img/meet/Fb_icon.png" alt="facebook"></a>
-                        <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter"></a>
-                        <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail"></a>
+                    <div class="meet__block-element col-lg-3 col-md-6 col-sm-12">
+                        <div class="meet__block-element-mugshot"></div>
+                        <h1 class="meet__block-element-title">Ashley Greene</h1>
+                        <p class="meet__block-element-position">SEO / Developer</p>
+                        <p class="meet__block-element-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                        <div class="meet__block-element-social">
+                            <a href="#"><img src="img/meet/Fb_icon.png" alt="facebook" /></a>
+                            <a href="#"><img src="img/meet/Twitter_icon.png" alt="Twitter" /></a>
+                            <a href="#"><img src="img/meet/Mail_icon.png" alt="Mail" /></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Skills-->
-    <div class="skills">
-        <div class="skills__container container-fluid">
+        <!--Skills-->
+        <div id="Skills" class="skills">
+            <div class="skills__container container-fluid">
                 <h1 class="skills__title">We got skills!</h1>
-                <p class="skills__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="skills__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
                 <div class="skills__block row">
-                <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/skills/ProgressDesign.png" class="img-fluid d-block" alt="progressWeb">
-                    <h1 class="skills__block-element-progress">90<span>%</span></h1>
-                    <h2 class="skills__block-element-title">Web Design</h2>
-                </div>
-                <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/skills/ProgressHTML.png" class="img-fluid d-block" alt="progressHTML">
-                    <h1 class="skills__block-element-progress">75<span>%</span></h1>
-                    <h2 class="skills__block-element-title">HTML / CSS</h2>
-                </div>
-                <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/skills/ProgressGraphic.png" class="img-fluid d-block" alt="progressGraphic">
-                    <h1 class="skills__block-element-progress">70<span>%</span></h1>
-                    <h2 class="skills__block-element-title">Graphic design</h2>
-                </div>
-                <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/skills/ProgressUI.png" class="img-fluid d-block" alt="progressUI">
-                    <h1 class="skills__block-element-progress">85<span>%</span></h1>
-                    <h2 class="skills__block-element-title">UI / UX</h2>
+                    <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/skills/ProgressDesign.png" class="img-fluid d-block" alt="progressWeb" />
+                        <h1 class="skills__block-element-progress">90<span>%</span></h1>
+                        <h2 class="skills__block-element-title">Web Design</h2>
+                    </div>
+                    <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/skills/ProgressHTML.png" class="img-fluid d-block" alt="progressHTML" />
+                        <h1 class="skills__block-element-progress">75<span>%</span></h1>
+                        <h2 class="skills__block-element-title">HTML / CSS</h2>
+                    </div>
+                    <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/skills/ProgressGraphic.png" class="img-fluid d-block" alt="progressGraphic" />
+                        <h1 class="skills__block-element-progress">70<span>%</span></h1>
+                        <h2 class="skills__block-element-title">Graphic design</h2>
+                    </div>
+                    <div class="skills__block-element col-lg-3 col-md-6 col-sm-12">
+                        <img src="img/skills/ProgressUI.png" class="img-fluid d-block" alt="progressUI" />
+                        <h1 class="skills__block-element-progress">85<span>%</span></h1>
+                        <h2 class="skills__block-element-title">UI / UX</h2>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Portfolio-->
-    <div class="portfolio">
-        <div class="portfolio__container container-fluid">
-            <h1 class="portfolio__title">Our portfolio</h1>
-            <p class="portfolio__description">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet<br>
-                consectetur, adipisci velit, sed quia non numquam</p>
-            <div class="portfolio__button">
-                <button class="portfolio__button-element">All</button>
-                <button class="portfolio__button-element">Web</button>
-                <button class="portfolio__button-element">Apps</button>
-                <button class="portfolio__button-element">Icons</button>
+        <!--Portfolio-->
+        <div id="Portfolio" class="portfolio">
+            <div class="portfolio__container container-fluid">
+                <h1 class="portfolio__title">Our portfolio</h1>
+                <p class="portfolio__description">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet<br />
+                    consectetur, adipisci velit, sed quia non numquam
+                </p>
+                <div class="portfolio__button">
+                    <button class="portfolio__button-element">All</button>
+                    <button class="portfolio__button-element">Web</button>
+                    <button class="portfolio__button-element">Apps</button>
+                    <button class="portfolio__button-element">Icons</button>
+                </div>
+                <div class="portfolio__block row">
+                    <div class="portfolio__block-element col-md-6 col-sm-12">
+                        <img src="img/portfolio/1.png" class="img-fluid" alt="Notebook1" />
+                        <h3 class="portfolio__block-element-title">Isometric Perspective Mock-Up</h3>
+                    </div>
+                    <div class="portfolio__block-element col-md-6 col-sm-12">
+                        <img src="img/portfolio/2.png" class="img-fluid" alt="Notebook2" />
+                        <h3 class="portfolio__block-element-title">Time Zone App UI</h3>
+                    </div>
+                    <div class="portfolio__block-element col-md-6 col-sm-12">
+                        <img src="img/portfolio/3.png" class="img-fluid" alt="Notebook3" />
+                        <h3 class="portfolio__block-element-title">Viro Media Players UI</h3>
+                    </div>
+                    <div class="portfolio__block-element col-md-6 col-sm-12">
+                        <img src="img/portfolio/4.png" class="img-fluid" alt="Notebook4" />
+                        <h3 class="portfolio__block-element-title">Blog / Magazine Flat UI Kit</h3>
+                    </div>
+                </div>
+                <button class="portfolio__projects">Load more projects</button>
             </div>
-            <div class="portfolio__block row">
-                <div class="portfolio__block-element col-md-6 col-sm-12">
-                    <img src="img/portfolio/1.png" class="img-fluid" alt="Notebook1">
-                    <h3 class="portfolio__block-element-title">Isometric Perspective Mock-Up</h3>
-                </div>
-                <div class="portfolio__block-element col-md-6 col-sm-12">
-                    <img src="img/portfolio/2.png" class="img-fluid" alt="Notebook2">
-                    <h3 class="portfolio__block-element-title">Time Zone App UI</h3>
-                </div>
-                <div class="portfolio__block-element col-md-6 col-sm-12">
-                    <img src="img/portfolio/3.png" class="img-fluid" alt="Notebook3">
-                    <h3 class="portfolio__block-element-title">Viro Media Players UI</h3>
-                </div>
-                <div class="portfolio__block-element col-md-6 col-sm-12">
-                    <img src="img/portfolio/4.png" class="img-fluid" alt="Notebook4">
-                    <h3 class="portfolio__block-element-title">Blog / Magazine Flat UI Kit</h3>
+        </div>
+        <!--Response-->
+        <div id="Response" class="response">
+            <div class="response__container container-fluid">
+                <h1 class="response__title">What poeple say about us</h1>
+                <p class="response__description">Our clients love us!</p>
+                <div class="response__block row">
+                    <div class="response__block-element col-md-6 col-sm-12">
+                        <div class="response__block-element-mugshot"></div>
+                        <div class="response__block-element-text">
+                            <p class="response__block-element-text-description">“Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Maecenas fringilla urna eu nisl scelerisque.”</p>
+                            <h1 class="response__block-element-text-title">Chanel Iman</h1>
+                            <p class="response__block-element-text-position">CEO of Pinterest</p>
+                        </div>
+                    </div>
+                    <div class="response__block-element col-md-6 col-sm-12">
+                        <div class="response__block-element-mugshot"></div>
+                        <div class="response__block-element-text">
+                            <p class="response__block-element-text-description">“Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.”</p>
+                            <h1 class="response__block-element-text-title">Adriana Lima</h1>
+                            <p class="response__block-element-text-position">Founder of Instagram</p>
+                        </div>
+                    </div>
+                    <div class="response__block-element col-md-6 col-sm-12">
+                        <div class="response__block-element-mugshot"></div>
+                        <div class="response__block-element-text">
+                            <p class="response__block-element-text-description">“Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.”</p>
+                            <h1 class="response__block-element-text-title">Anne Hathaway</h1>
+                            <p class="response__block-element-text-position">Lead Designer at Behance</p>
+                        </div>
+                    </div>
+                    <div class="response__block-element col-md-6 col-sm-12">
+                        <div class="response__block-element-mugshot"></div>
+                        <div class="response__block-element-text">
+                            <p class="response__block-element-text-description">“Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque.”</p>
+                            <h1 class="response__block-element-text-title">Emma Stone</h1>
+                            <p class="response__block-element-text-position">Co-Founder of Shazam</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="portfolio__projects">Load more projects</button>
+        </div>
+        <!--Touch-->
+        <div id="Touch" class="touch">
+            <div class="touch__container container-fluid">
+                <h1 class="touch__title">Get in touch</h1>
+                <p class="touch__description">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</p>
+                <form class="touch__form">
+                    <input type="text" class="name" id="name" placeholder="Your Name" pattern="[A-Za-z\s]+" required />
+                    <input type="email" class="email" placeholder="Your Email" required />
+                    <textarea class="textarea" placeholder="Your Message" required></textarea>
+                    <input type="submit" class="submit" value="Send message" />
+                </form>
+            </div>
         </div>
     </div>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__container container-fluid">
+            <div class="footer__block">
+                <a href="" class="footer__block-link">Facebook</a>
+                <a href="" class="footer__block-link">Twitter</a>
+                <a href="" class="footer__block-link">Google+</a>
+                <a href="" class="footer__block-link">LinkedIn</a>
+                <a href="" class="footer__block-link">Behance</a>
+                <a href="" class="footer__block-link">Dribbble</a>
+                <a href="" class="footer__block-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </div>
 <!-- Script -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,29 @@
+/* Content */
+.content {
+  padding-top: 120px;
+  width: 100%;
+}
+
+@import "scss/layout/part-of-content/welcome";
+@import "scss/layout/part-of-content/services";
+@import "scss/layout/part-of-content/meet";
+@import "scss/layout/part-of-content/skills";
+@import "scss/layout/part-of-content/portfolio";
+@import "scss/layout/part-of-content/response";
+@import "scss/layout/part-of-content/touch";
+
+@media (max-width: 1170px) {
+  .content {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 991px) {
+  .content {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    padding-top: 40px;
+  }
+}

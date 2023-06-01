@@ -1,14 +1,19 @@
 /* Color */
-
+$transparent: transparent;
 $white: #fff;
 $white-light: #f7f3ea;
 $black: #000;
 $orange: #eb7d4b;
 $brown: #878787;
+$red: red;
 $black-gray: #393939;
 $black-light: #27283d;
 $blue-light: #30bae7;
 $blue-dark: #3c4761;
+$yellow-light: #ffdd99;
+$violet: #273a71;
+$blue-cyan: #30bae7;
+$blue-cyan-dark: #2892b5;
 
 
 /* Background-color */
@@ -18,6 +23,9 @@ $bg-service: #17c2a4;
 $bg-skills: #ffffff;
 $bg-meet: #e7f1f8;
 $bg-portfolio: #ffdd99;
+$bg-response: #d74680;
+$bg-touch: #3c5499;
+$bg-footer: #344b8e;
 
 /* Border-color */
 
@@ -45,6 +53,7 @@ $fs-extra-large: 50px;
 /* Base font-size */
 
 $fs-base: 16px;
+$fs-response: 21px;
 $fs-span: 32px;
 $fs-title: 40px;
 
@@ -61,3 +70,4 @@ $border-shadow-smaller: rgba(0, 0, 0, 0.12);
 /* Hover */
 
 $button-hover-color: #ff964b;
+$header-link-hover-color: #643a79;

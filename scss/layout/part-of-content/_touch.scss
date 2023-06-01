@@ -1,0 +1,168 @@
+/* Touch */
+.touch {
+  padding: 120px 0 80px;
+  width: 100%;
+  background-color: $bg-touch;
+  color: $white;
+  &__container {
+    max-width: 1170px;
+    text-align: center;
+    .touch__title {
+      margin: 0 0 3.75% 7px;
+      position: relative;
+      font: 700 $fs-title $font-family-base;
+      letter-spacing: 4px;
+      line-height: 30px;
+      text-transform: uppercase;
+      &::before {
+        @include line;
+        background-color: $black;
+        opacity: 0.15;
+        top: 51px;
+        left: 46%;
+      }
+    }
+    .touch__description {
+      margin: 0 0 6.5% 7px;
+      font: 400 $fs-small-medium $font-family-base;
+      letter-spacing: 0.36px;
+      line-height: 26px;
+    }
+    .touch__form {
+      width: 860px;
+      margin: 0 auto;
+      .name, .email, .textarea {
+        @include size(414px, 56px);
+        background-color: $violet;
+        border-radius: 5px;
+        padding-left: 25px;
+        margin-bottom: 27px;
+        color: $white;
+        font: 400 $fs-small-medium $font-family-base;
+        line-height: 18px;
+        &::placeholder {
+          color: $white;
+          font: 400 $fs-small-medium $font-family-base;
+          font-size: 18px;
+          line-height: 18px;
+        }
+        &:focus {
+          &::placeholder {
+            color: $transparent;
+          }
+        }
+      }
+      .name {
+        margin-right: 13px;
+      }
+      .email {
+        margin-left: 13px;
+      }
+      .textarea {
+        padding-top: 22px;
+        margin-bottom: 52px;
+        overflow: auto;
+        @include size(100%, 200px);
+      }
+      .submit {
+        color: $white;
+        background-color: $blue-cyan;
+        border-bottom: 4px solid $border-shadow;
+        border-radius: 5px;
+        padding: 20px 82px 16px;
+        margin-left: 4px;
+        text-transform: uppercase;
+        font: 600 $fs-small-medium $font-family-base;
+        letter-spacing: 0.025em;
+        line-height: 30px;
+        margin-bottom: 35px;
+        &:hover {
+          background-color: $blue-cyan-dark;
+          border-bottom: 4px solid $border-shadow-smaller;
+        }
+      }
+    }
+  }
+}
+/* Adaptive for touch */
+@media (max-width: 1170px) {
+  .touch {
+    padding: 108px 0 100px;
+    &__container {
+      max-width: 991px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .touch {
+    padding: 98px 0 90px;
+    &__container {
+      max-width: 767px;
+      .touch__title {
+        margin-left: 0;
+        font-size: $fs-large-medium;
+        letter-spacing: 2px;
+        &::before {
+          @include line;
+          top: 42px;
+          left: 46%;
+        }
+      }
+      .touch__description {
+        margin-left: 0;
+        font-size: $fs-base;
+        line-height: 22px;
+      }
+      .touch__form {
+        width: 620px;
+        .name, .email {
+          @include size(380px, 50px);
+          margin: 0;
+        }
+        .name, .email, .textarea {
+          font-size: $fs-base;
+          line-height: 16px;
+          margin-bottom: 20px;
+          &::placeholder {
+            font-size: $fs-base;
+            line-height: 16px;
+          }
+        }
+        .submit {
+          border-bottom: $border-shadow-smaller;
+          padding: 18px 50px 14px;
+          margin-left: 2px;
+          font-size: $fs-base;
+          line-height: 28px;
+          margin-bottom: 30px;
+          &:hover {
+            border-bottom: 3px solid $border-shadow-smaller;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .touch {
+    padding: 78px 0 70px;
+    &__container {
+      max-width: 320px;
+      .touch__title {
+        font-size: $fs-extra-medium-large;
+        margin-bottom: 20px;
+        &::before {
+          @include line;
+          top: 38px;
+          left: 35%;
+        }
+      }
+      .touch__form {
+        width: 290px;
+        .name, .email {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

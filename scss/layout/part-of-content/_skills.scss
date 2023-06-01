@@ -1,13 +1,12 @@
+/* Skills */
 .skills {
   padding: 116px 0 115px;
   width: 100%;
   background-color: $bg-skills;
   color: $blue-dark;
-
   &__container {
     max-width: 1170px;
     text-align: center;
-
     .skills__title {
       margin: 0 0 3.75% 4px;
       position: relative;
@@ -15,7 +14,6 @@
       letter-spacing: 4px;
       line-height: 30px;
       text-transform: uppercase;
-
       &::before {
         @include line;
         background-color: $black;
@@ -24,23 +22,19 @@
         left: 46%;
       }
     }
-
     .skills__description {
       margin: 0 0 7.2% 7px;
       font: 400 $fs-small-medium $font-family-base;
       letter-spacing: 0.36px;
       line-height: 26px;
     }
-
     .skills__block {
       padding: 0 24px;
-
       &-element {
         img {
           position: relative;
           margin: 0 auto 31px auto;
         }
-
         &-progress {
           position: absolute;
           font: 300 $fs-extra-large $font-family-base;
@@ -48,14 +42,12 @@
           text-transform: uppercase;
           top: 31.4%;
           left: 38%;
-
           span {
             margin: -2px 0 0 2px;
             font-size: $fs-span;
             letter-spacing: 0.55px;
           }
         }
-
         &-title {
           font: 700 $fs-medium-small $font-family-base;
           line-height: 18px;
@@ -66,18 +58,15 @@
     }
   }
 }
-
+/* Adaptive for skills */
 @media (max-width: 1170px) {
   .skills {
     padding: 108px 0 100px;
-
     &__container {
       max-width: 991px;
-
       .skills__block {
         &-element {
           padding: 0;
-
           &-progress {
             left: 36%;
           }
@@ -86,44 +75,34 @@
     }
   }
 }
-
 @media (max-width: 991px) {
   .skills {
     padding: 98px 0 90px;
-
     &__container {
       max-width: 767px;
-
       .skills__title {
         margin-left: 0;
         font-size: $fs-large-medium;
         letter-spacing: 2px;
-
         &::before {
           @include line;
           top: 42px;
           left: 45%;
         }
       }
-
       .skills__description {
         margin-left: 0;
         font-size: $fs-base;
         line-height: 22px;
-
       }
-
       .skills__block {
         padding: 0 10px;
-
         &-element {
           padding: 0;
-
           &-progress {
             top: 29%;
             left: 41.5%;
           }
-
           &-title {
             font-size: $fs-medium-smaller;
             line-height: 16px;
@@ -134,44 +113,34 @@
     }
   }
 }
-
-
 @media (max-width: 767px) {
   .skills {
     padding: 78px 0 70px;
-
     &__container {
       max-width: 320px;
-
       .skills__title {
         font-size: $fs-extra-medium-large;
         margin-bottom: 20px;
-
         &::before {
           @include line;
           top: 40px;
           left: 35%;
         }
       }
-
       .skills__description {
         br {
           display: none;
         }
       }
-
       .skills__block {
-
         &-element {
           img {
             margin-bottom: 18px;
           }
-
           &-progress {
             top: 29%;
             left: 39%;
           }
-
           &-title {
             margin-bottom: 35px;
           }
@@ -180,4 +149,3 @@
     }
   }
 }
-
