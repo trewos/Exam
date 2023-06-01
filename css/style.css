@@ -117,7 +117,7 @@ h6 {
 }
 .header__container {
   max-width: 1170px;
-  padding: 52px 42px 26px 80px !important;
+  padding: 35px 42px 26px 80px !important;
 }
 .header__container .header-burger-menu-list-item {
   margin: 0 5.5px;
@@ -132,6 +132,7 @@ h6 {
   line-height: 18px;
   padding: 7px 17px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .header__container .header-burger-menu-list-item .header-burger-menu-list-link:hover {
   background-color: #643a79;
