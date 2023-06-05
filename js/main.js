@@ -35,9 +35,9 @@ function smoothScroll(event, target) {
 
 /* Check input value (touch block) */
 
-const inputName = document.querySelector('.name');
-const inputEmail = document.querySelector('.email');
-const inputText = document.querySelector('.textarea');
+const inputName = document.getElementById('name');
+const inputEmail = document.getElementById('email');
+const inputText = document.getElementById('textarea');
 const submitButton = document.querySelector('.submit');
 
 submitButton.addEventListener('click', Error);
@@ -60,7 +60,7 @@ function Error() {
     inputText.style.border = isEmptyText ? '0px' : '1px solid red';
 }
 
-/* Delete padding with header */
+/* Delete padding with header (content block) */
 
 const wrapper = document.querySelector('.wrapper');
 const headers = wrapper.querySelectorAll('.header');
@@ -75,3 +75,23 @@ function setPaddingToContents() {
 headers.forEach((header) => {
     header.addEventListener('DOMNodeRemoved', setPaddingToContents);
 });
+
+/* Hide label if input have text (touch block) */
+
+$(document).ready(function(){
+
+    $('.touch__form-element').click(function(){
+        $('.touch__form-element-input',this).focus();
+    })
+    
+    $('.touch__form-element-input').on('input',function(){
+        var len = ($(this).val()).length;
+        if (len)
+            $(this).next('label').hide();
+        else
+            $(this).next('label').show();
+    })
+  
+})
+
+/* Textarea resizer (touch block) */

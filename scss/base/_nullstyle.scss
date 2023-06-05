@@ -88,6 +88,10 @@ h6 {
   font-weight: inherit;
 }
 
+::-webkit-resizer {
+  color: transparent;
+}
+
 .wrapper {
   padding: 0 !important;
   display: flex;

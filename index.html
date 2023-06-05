@@ -254,9 +254,19 @@
                 <h1 class="touch__title">Get in touch</h1>
                 <p class="touch__description">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</p>
                 <form class="touch__form">
-                    <input type="text" class="name" id="name" placeholder="Your Name" pattern="[A-Za-z\s]+" required />
-                    <input type="email" class="email" placeholder="Your Email" required />
-                    <textarea class="textarea" placeholder="Your Message" required></textarea>
+                    <div  class="touch__form-element">
+                        <input type="text" name="name" id="name" class="touch__form-element-input" pattern="[A-Za-z\s]+" required>
+                        <label>Your Name</label>
+                    </div>
+                    <div  class="touch__form-element">
+                        <input type="email" name="email" id="email" class="touch__form-element-input" required>
+                        <label>Your Email</label>
+                    </div>
+                    <div class="touch__form-text">
+                        <textarea  class="touch__form-text-textarea" id="textarea" required></textarea>
+                        <label>Your Message</label>
+                        <img src="img/Arrow.png" class="touch__form-text-textarea-resizer" alt="resizer">
+                    </div>
                     <input type="submit" class="submit" value="Send message" />
                 </form>
             </div>

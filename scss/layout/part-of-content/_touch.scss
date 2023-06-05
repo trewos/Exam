@@ -1,3 +1,4 @@
+
 /* Touch */
 .touch {
   padding: 120px 0 80px;
@@ -31,51 +32,108 @@
     .touch__form {
       width: 860px;
       margin: 0 auto;
-      .name, .email, .textarea {
-        @include size(414px, 56px);
-        background-color: $violet;
-        border-radius: 5px;
-        padding-left: 25px;
-        margin-bottom: 27px;
-        color: $white;
-        font: 400 $fs-small-medium $font-family-base;
-        line-height: 18px;
-        &::placeholder {
+
+      &-element {
+        position: relative;
+        display:inline-block;
+
+        &-input {
+          @include size(414px, 56px);
+          background-color: $violet;
+          border-radius: 5px;
+          padding-left: 25px;
+          margin-bottom: 27px;
           color: $white;
           font: 400 $fs-small-medium $font-family-base;
-          font-size: 18px;
           line-height: 18px;
         }
-        &:focus {
-          &::placeholder {
-            color: $transparent;
-          }
+
+        & .touch__form-element-input + label {
+          position: absolute;
+          font: 400 $fs-small-medium $font-family-base;
+          top: 16px;
+          left: 26px;
+        }
+
+        & .touch__form-element-input:focus + label {
+          opacity: 0;
+        }
+
+        & .touch__form-element-input + label:after {
+          font: $fs-base $font-family-required;
+          content: ' *';
+          color: $red;
         }
       }
-      .name {
+
+      &-element:nth-child(1) {
         margin-right: 13px;
       }
-      .email {
+
+      &-element:nth-child(2) {
         margin-left: 13px;
       }
-      .textarea {
-        padding-top: 22px;
-        margin-bottom: 52px;
-        overflow: auto;
-        @include size(100%, 200px);
+
+
+      &-text {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+
+        &-textarea {
+          background-color: $violet;
+          border-radius: 5px;
+          padding-left: 25px;
+          color: $white;
+          font: 400 $fs-small-medium $font-family-base;
+          line-height: 18px;
+          padding-top: 22px;
+          margin-bottom: 0;
+          overflow: auto;
+          min-height: 64px;
+          @include size(100%, 200px);
+
+          &-resizer {
+            position: absolute;
+            bottom: 15px;
+            right: 6px;
+          }
+        }
+
+        & .touch__form-text-textarea + label {
+          position: absolute;
+          font: 400 $fs-small-medium $font-family-base;
+          top: 18px;
+          left: 26px;
+        }
+
+        & .touch__form-text-textarea:focus + label {
+          opacity: 0;
+        }
+
+        & .touch__form-text-textarea:valid + label {
+          opacity: 0;
+        }
+
+        & .touch__form-text-textarea + label:after {
+          font: $fs-base $font-family-required;
+          content: ' *';
+          color: $red;
+        }
       }
+
+    
       .submit {
         color: $white;
         background-color: $blue-cyan;
         border-bottom: 4px solid $border-shadow;
         border-radius: 5px;
         padding: 20px 82px 16px;
-        margin-left: 4px;
         text-transform: uppercase;
         font: 600 $fs-small-medium $font-family-base;
         letter-spacing: 0.025em;
         line-height: 30px;
-        margin-bottom: 35px;
+        margin: 52px 0 35px 4px;
         &:hover {
           background-color: $blue-cyan-dark;
           border-bottom: 4px solid $border-shadow-smaller;
@@ -115,26 +173,58 @@
       }
       .touch__form {
         width: 620px;
-        .name, .email {
-          @include size(380px, 50px);
-          margin: 0;
+
+        &-element {
+
+          &-input {
+            @include size(380px, 50px);
+            font-size: $fs-base;
+            line-height: 16px;
+            margin-bottom: 20px;
+          }
+
+          & .touch__form-element-input + label {
+            top: 12px;
+            font-size: $fs-base;
+          }
+
+          & .touch__form-element-input + label:after {
+            font-size: $fs-smaller;
+          }
         }
-        .name, .email, .textarea {
-          font-size: $fs-base;
-          line-height: 16px;
-          margin-bottom: 20px;
-          &::placeholder {
+
+        &-element:nth-child(1) {
+          margin-right: 0;
+        }
+  
+        &-element:nth-child(2) {
+          margin-left: 0;
+        }
+
+        &-text {
+          margin: 0;
+
+          &-textarea {
             font-size: $fs-base;
             line-height: 16px;
           }
+
+          & .touch__form-text-textarea + label {
+            top: 14px;
+            font-size: $fs-base;
+          }
+
+          & .touch__form-text-textarea + label:after {
+            font-size: $fs-smaller;
+          }
         }
+        
         .submit {
           border-bottom: $border-shadow-smaller;
           padding: 18px 50px 14px;
-          margin-left: 2px;
           font-size: $fs-base;
           line-height: 28px;
-          margin-bottom: 30px;
+          margin: 20px 0 30px 2px;
           &:hover {
             border-bottom: 3px solid $border-shadow-smaller;
           }
@@ -159,8 +249,13 @@
       }
       .touch__form {
         width: 290px;
-        .name, .email {
+        
+        .touch__form-element {
           width: 100%;
+
+          .touch__form-element-input {
+            width: 100%;
+          }
         }
       }
     }

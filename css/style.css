@@ -99,6 +99,10 @@ h6 {
   font-weight: inherit;
 }
 
+::-webkit-resizer {
+  color: transparent;
+}
+
 .wrapper {
   padding: 0 !important;
   display: flex;
@@ -117,7 +121,7 @@ h6 {
 }
 .header__container {
   max-width: 1170px;
-  padding: 35px 42px 26px 80px !important;
+  padding: 52px 42px 26px 80px !important;
 }
 .header__container .header-burger-menu-list-item {
   margin: 0 5.5px;
@@ -1453,7 +1457,11 @@ h6 {
   width: 860px;
   margin: 0 auto;
 }
-.touch__container .touch__form .name, .touch__container .touch__form .email, .touch__container .touch__form .textarea {
+.touch__container .touch__form-element {
+  position: relative;
+  display: inline-block;
+}
+.touch__container .touch__form-element-input {
   width: 414px;
   height: 56px;
   background-color: #273a71;
@@ -1464,36 +1472,66 @@ h6 {
   font: 400 18px "Titillium Web", sans-serif;
   line-height: 18px;
 }
-.touch__container .touch__form .name::-moz-placeholder, .touch__container .touch__form .email::-moz-placeholder, .touch__container .touch__form .textarea::-moz-placeholder {
-  color: #fff;
+.touch__container .touch__form-element .touch__form-element-input + label {
+  position: absolute;
   font: 400 18px "Titillium Web", sans-serif;
-  font-size: 18px;
-  line-height: 18px;
+  top: 16px;
+  left: 26px;
 }
-.touch__container .touch__form .name::placeholder, .touch__container .touch__form .email::placeholder, .touch__container .touch__form .textarea::placeholder {
-  color: #fff;
-  font: 400 18px "Titillium Web", sans-serif;
-  font-size: 18px;
-  line-height: 18px;
+.touch__container .touch__form-element .touch__form-element-input:focus + label {
+  opacity: 0;
 }
-.touch__container .touch__form .name:focus::-moz-placeholder, .touch__container .touch__form .email:focus::-moz-placeholder, .touch__container .touch__form .textarea:focus::-moz-placeholder {
-  color: transparent;
+.touch__container .touch__form-element .touch__form-element-input + label:after {
+  font: 16px "Arial MT";
+  content: " *";
+  color: red;
 }
-.touch__container .touch__form .name:focus::placeholder, .touch__container .touch__form .email:focus::placeholder, .touch__container .touch__form .textarea:focus::placeholder {
-  color: transparent;
-}
-.touch__container .touch__form .name {
+.touch__container .touch__form-element:nth-child(1) {
   margin-right: 13px;
 }
-.touch__container .touch__form .email {
+.touch__container .touch__form-element:nth-child(2) {
   margin-left: 13px;
 }
-.touch__container .touch__form .textarea {
+.touch__container .touch__form-text {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.touch__container .touch__form-text-textarea {
+  background-color: #273a71;
+  border-radius: 5px;
+  padding-left: 25px;
+  color: #fff;
+  font: 400 18px "Titillium Web", sans-serif;
+  line-height: 18px;
   padding-top: 22px;
-  margin-bottom: 52px;
+  margin-bottom: 0;
   overflow: auto;
+  min-height: 64px;
   width: 100%;
   height: 200px;
+}
+.touch__container .touch__form-text-textarea-resizer {
+  position: absolute;
+  bottom: 15px;
+  right: 6px;
+}
+.touch__container .touch__form-text .touch__form-text-textarea + label {
+  position: absolute;
+  font: 400 18px "Titillium Web", sans-serif;
+  top: 18px;
+  left: 26px;
+}
+.touch__container .touch__form-text .touch__form-text-textarea:focus + label {
+  opacity: 0;
+}
+.touch__container .touch__form-text .touch__form-text-textarea:valid + label {
+  opacity: 0;
+}
+.touch__container .touch__form-text .touch__form-text-textarea + label:after {
+  font: 16px "Arial MT";
+  content: " *";
+  color: red;
 }
 .touch__container .touch__form .submit {
   color: #fff;
@@ -1501,12 +1539,11 @@ h6 {
   border-bottom: 4px solid rgba(0, 0, 0, 0.16);
   border-radius: 5px;
   padding: 20px 82px 16px;
-  margin-left: 4px;
   text-transform: uppercase;
   font: 600 18px "Titillium Web", sans-serif;
   letter-spacing: 0.025em;
   line-height: 30px;
-  margin-bottom: 35px;
+  margin: 52px 0 35px 4px;
 }
 .touch__container .touch__form .submit:hover {
   background-color: #2892b5;
@@ -1550,31 +1587,46 @@ h6 {
   .touch__container .touch__form {
     width: 620px;
   }
-  .touch__container .touch__form .name, .touch__container .touch__form .email {
+  .touch__container .touch__form-element-input {
     width: 380px;
     height: 50px;
-    margin: 0;
-  }
-  .touch__container .touch__form .name, .touch__container .touch__form .email, .touch__container .touch__form .textarea {
     font-size: 16px;
     line-height: 16px;
     margin-bottom: 20px;
   }
-  .touch__container .touch__form .name::-moz-placeholder, .touch__container .touch__form .email::-moz-placeholder, .touch__container .touch__form .textarea::-moz-placeholder {
+  .touch__container .touch__form-element .touch__form-element-input + label {
+    top: 12px;
+    font-size: 16px;
+  }
+  .touch__container .touch__form-element .touch__form-element-input + label:after {
+    font-size: 14px;
+  }
+  .touch__container .touch__form-element:nth-child(1) {
+    margin-right: 0;
+  }
+  .touch__container .touch__form-element:nth-child(2) {
+    margin-left: 0;
+  }
+  .touch__container .touch__form-text {
+    margin: 0;
+  }
+  .touch__container .touch__form-text-textarea {
     font-size: 16px;
     line-height: 16px;
   }
-  .touch__container .touch__form .name::placeholder, .touch__container .touch__form .email::placeholder, .touch__container .touch__form .textarea::placeholder {
+  .touch__container .touch__form-text .touch__form-text-textarea + label {
+    top: 14px;
     font-size: 16px;
-    line-height: 16px;
+  }
+  .touch__container .touch__form-text .touch__form-text-textarea + label:after {
+    font-size: 14px;
   }
   .touch__container .touch__form .submit {
     border-bottom: rgba(0, 0, 0, 0.12);
     padding: 18px 50px 14px;
-    margin-left: 2px;
     font-size: 16px;
     line-height: 28px;
-    margin-bottom: 30px;
+    margin: 20px 0 30px 2px;
   }
   .touch__container .touch__form .submit:hover {
     border-bottom: 3px solid rgba(0, 0, 0, 0.12);
@@ -1602,7 +1654,10 @@ h6 {
   .touch__container .touch__form {
     width: 290px;
   }
-  .touch__container .touch__form .name, .touch__container .touch__form .email {
+  .touch__container .touch__form .touch__form-element {
+    width: 100%;
+  }
+  .touch__container .touch__form .touch__form-element .touch__form-element-input {
     width: 100%;
   }
 }
